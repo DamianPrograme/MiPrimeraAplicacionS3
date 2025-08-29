@@ -23,7 +23,7 @@ class MainActivity : AppCompatActivity() {
 
 
         var defUsername = "[Null]"
-        var defPasswd = "admin123"
+        var defPasswd = "admin1234"
 
         btnLogin.setOnClickListener {
             if(edUsername.text.toString() == defUsername.toString()
