@@ -1,6 +1,8 @@
 package com.example.miprimeraaplicacion
 
+import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -16,9 +18,18 @@ class MainActivity2 : AppCompatActivity() {
         //esto nos sirve para recibir los usuarios desde la pantalla principal
 
         val txUsuario:TextView = findViewById(R.id.id_usuario_logueado)
+
         val recibirUsernameS = intent.getStringExtra("par_usern")
+        val btnCalculadora: Button = findViewById(R.id.btn_calculadora)
 
         txUsuario.text = recibirUsernameS.toString()
+
+        btnCalculadora.setOnClickListener{
+            val nuevaVentana2 = Intent(this, MainActivity3::class.java)
+            //esto es para mostrar el nombre de usuario en la ventana de inicio
+            startActivity(nuevaVentana2)
+
+        }
 
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->

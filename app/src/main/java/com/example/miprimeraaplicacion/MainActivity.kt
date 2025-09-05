@@ -21,16 +21,16 @@ class MainActivity : AppCompatActivity() {
         val btnLogin: Button = findViewById(R.id.btn_login)
         val txMensaje: TextView = findViewById(R.id.tx_mensaje)
 
-
+        // este es el usuario, y la contraseña para entrar
         var defUsername = "[Null]"
         var defPasswd = "admin1234"
-
+        // este es el formato de lo que acepta el validar usuario
         btnLogin.setOnClickListener {
             if(edUsername.text.toString() == defUsername.toString()
                 && edPassw.text.toString() == defPasswd.toString()){
-
+                //este es la validacion de los datos para permitir la entrada
                 val nuevaVentana = Intent(this, MainActivity2::class.java)
-
+                //esto es para mostrar el nombre de usuario en la ventana de inicio
                 nuevaVentana.putExtra("par_usern",edUsername.text.toString())
 
 
