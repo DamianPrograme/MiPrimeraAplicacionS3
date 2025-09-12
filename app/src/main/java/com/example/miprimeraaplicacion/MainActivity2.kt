@@ -21,7 +21,7 @@ class MainActivity2 : AppCompatActivity() {
 
         val recibirUsernameS = intent.getStringExtra("par_usern")
         val btnCalculadora: Button = findViewById(R.id.btn_calculadora)
-
+        val btnMenu : Button = findViewById(R.id.btn_menu)
         txUsuario.text = recibirUsernameS.toString()
 
         btnCalculadora.setOnClickListener{
@@ -31,6 +31,10 @@ class MainActivity2 : AppCompatActivity() {
 
         }
 
+        btnMenu.setOnClickListener {
+            val nuevaVentana4 = Intent(this, MainActivity4::class.java)
+            startActivity(nuevaVentana4)
+        }
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
