@@ -7,6 +7,7 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.Spinner
 import android.widget.TextView
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -33,6 +34,15 @@ class MainActivity3 : AppCompatActivity() {
             var numeroDos: Int = edNumero2.text.toString().toIntOrNull() ?: 0
 
             txResultado.text = OpMatematicas.dividirValores(numeroUno, numeroDos)
+
+            var str_op_selected = spOperacion.selectedItem.toString()
+
+            val toast = Toast.makeText(
+                this
+                ,str_op_selected
+                , Toast.LENGTH_SHORT
+            )
+            toast.show()
         }
 
         val opcionesSpinner = arrayOf(
@@ -50,6 +60,7 @@ class MainActivity3 : AppCompatActivity() {
         //
 
         spOperacion.adapter = adaptador
+
 
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
