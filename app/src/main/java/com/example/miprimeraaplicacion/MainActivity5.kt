@@ -22,7 +22,7 @@ class MainActivity5 : AppCompatActivity() {
         val btnAccion: Button = findViewById(R.id.btn_accion)
 
         CargarRegionComunaAPI.cargarRegionComuna(this, spRegion)
-
+        CargarRegionComunaAPI.cargarRegionComuna2(this, spComuna)
 
 
 
