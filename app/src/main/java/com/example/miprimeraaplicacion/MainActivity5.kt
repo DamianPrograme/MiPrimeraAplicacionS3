@@ -8,6 +8,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.example.miprimeraaplicacion.ApiRegionComuna.CargarRegionComunaAPI
 
 class MainActivity5 : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -20,7 +21,7 @@ class MainActivity5 : AppCompatActivity() {
         val spComuna: Spinner = findViewById(R.id.sp_comuna)
         val btnAccion: Button = findViewById(R.id.btn_accion)
 
-
+        CargarRegionComunaAPI.cargarRegionComuna(this, spRegion)
 
 
 
