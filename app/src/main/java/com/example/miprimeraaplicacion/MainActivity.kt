@@ -29,7 +29,7 @@ class MainActivity : AppCompatActivity() {
             if(edUsername.text.toString() == defUsername.toString()
                 && edPassw.text.toString() == defPasswd.toString()){
                 //este es la validacion de los datos para permitir la entrada
-                val nuevaVentana = Intent(this, MainActivity2::class.java)
+                val nuevaVentana = Intent(this, MainActivity6::class.java)
                 //esto es para mostrar el nombre de usuario en la ventana de inicio
                 nuevaVentana.putExtra("par_usern",edUsername.text.toString())
 
