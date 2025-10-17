@@ -1,5 +1,6 @@
 package com.example.miprimeraaplicacion
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.ArrayAdapter
 import android.widget.ListView
@@ -26,6 +27,7 @@ class MainActivity6 : AppCompatActivity() {
         val opcionesArr = arrayOf(
             "Calculadora"
             ,"Api Rest"
+            ,"Api Nom"
         )
 
         val adaptador = ArrayAdapter(this
@@ -38,9 +40,14 @@ class MainActivity6 : AppCompatActivity() {
             val itemElegido = parent.getItemAtPosition(position).toString()
 
             if(itemElegido == "Calculadora"){
-
+            val abrirCalculadora = Intent (this,MainActivity4::class.java)
+                startActivity(abrirCalculadora)
             }else if (itemElegido == "Api Rest"){
-
+            val abrirApiRest = Intent (this,MainActivity5::class.java)
+                startActivity(abrirApiRest)
+            }else if (itemElegido == "Api Nom"){
+            val abrirApiNom = Intent (this,MainActivity7::class.java)
+                startActivity(abrirApiNom)
             }
 
         }
